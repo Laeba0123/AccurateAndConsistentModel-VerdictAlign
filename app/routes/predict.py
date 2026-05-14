@@ -1,20 +1,20 @@
 from fastapi import APIRouter, HTTPException
 from pydantic import BaseModel
 
-# Ensure these match your actual file structure
-from ..core.modle_handler import predict_attrition as ModelHandler 
+# Correct imports
+from ..core.modle_handler import predict_attrition
 from ..core.inconsistency import InconsistencyEngine
 from ..core.expectation import ExpectationEngine
-from ..core.explainability import generate_explanation 
+from ..core.explainability import generate_explanation
 
 router = APIRouter()
 
-# Instantiate handlers once to maintain state/efficiency
-model_handler = ()
+# Initialize engines
 expectation_engine = ExpectationEngine()
 inconsistency_engine = InconsistencyEngine()
 
 
+# Input schema
 class EmployeeInput(BaseModel):
     Age: int
     Department: str
@@ -25,38 +25,57 @@ class EmployeeInput(BaseModel):
     OverTime: str
     WorkLifeBalance: int
 
+
 @router.post("/predict")
 def predict(employee: EmployeeInput):
+
     try:
+
+        # Convert request to dictionary
         employee_data = employee.dict()
 
-        prediction_label, probability = ModelHandler(employee_data)
-        prediction_idx = 1 if prediction_label == "Yes" else 0
+        # ML prediction
+        prediction_label, probability = predict_attrition(employee_data)
 
+        # Mock similar historical cases
         class MockPoint:
             def __init__(self, attrition):
                 self.payload = {"Attrition": attrition}
-        
-        # Example: Mocking historical similar cases
-        mock_search_results = [MockPoint(1), MockPoint(1), MockPoint(0)]
-        expectation = expectation_engine.compute(mock_search_results) 
 
-        # 3. Consistency check
+        mock_search_results = [
+            MockPoint(1),
+            MockPoint(1),
+            MockPoint(0)
+        ]
+
+        # Expected historical behavior
+        expectation = expectation_engine.compute(
+            mock_search_results
+        )
+
+        # Consistency evaluation
         inconsistency = inconsistency_engine.evaluate(
             model_prediction=prediction_label,
             expected=expectation
         )
 
-        # 4. Explanation logic
-        explanation= generate_explanation(employee_data)
+        # SHAP explanation
+        explanation = generate_explanation(
+            employee_data
+        )
 
+        # Final response
         return {
             "prediction": prediction_label,
-            "probability": round(probability, 2),
+            "probability": round(float(probability), 2),
             "expected_behavior": expectation,
             "consistency_status": inconsistency,
             "explanation": explanation
         }
+
     except Exception as e:
-        # This catches the error seen in image_494a33.png and explains it
-        raise HTTPException(status_code=500, detail=str(e))
+
+        raise HTTPException(
+            status_code=500,
+            detail=str(e)
+        )

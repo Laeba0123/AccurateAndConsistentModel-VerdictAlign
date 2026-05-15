@@ -1,0 +1,20 @@
+# C:\VerdictAlign\render.yaml
+services:
+  - type: web
+    name: verdictalign-api
+    runtime: python
+    repo: https://github.com/YOUR_USERNAME/VerdictAlign # Change this!
+    plan: free
+    branch: main
+    buildCommand: |
+      pip install --upgrade pip
+      pip install -r requirements.txt
+    startCommand: |
+      gunicorn app:app --workers 2 --worker-class uvicorn.workers.UvicornWorker --bind 0.0.0.0:10000
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.0
+      - key: ENVIRONMENT
+        value: production
+      - key: MODEL_PATH
+        value: /opt/render/project/src/models

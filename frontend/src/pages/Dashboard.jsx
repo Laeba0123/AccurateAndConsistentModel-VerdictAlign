@@ -40,9 +40,10 @@ export default function Dashboard() {
 
     try {
 
-      const response = await axios.post(
+      const API_BASE = import.meta.env.VITE_API_URL || 'https://accurateandconsistentmodel-verdictalign-9.onrender.com/api/v1';
 
-        "http://127.0.0.1:8000/predict",
+      const response = await axios.post(
+  `${API_BASE}/predict`,
 
         formData
       )

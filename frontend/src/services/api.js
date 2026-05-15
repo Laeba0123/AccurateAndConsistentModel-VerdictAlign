@@ -1,5 +1,5 @@
 // frontend/src/services/api.js
-const API_BASE = import.meta.env.VITE_API_URL || 'http://localhost:8000/api/v1';
+const API_BASE = import.meta.env.VITE_API_URL || 'https://accurateandconsistentmodel-verdictalign-9.onrender.com/api/v1';
 
 export const predictAttrition = async (employeeData) => {
   const response = await fetch(`${API_BASE}/predict`, {

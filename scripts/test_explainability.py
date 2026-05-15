@@ -1,14 +1,13 @@
 import joblib
 from app.utils.helper import normalize_input
 from app.core.preprocessing import Preprocessor
-from app.core.explainability import ExplainabilityEngine
+from app.core.explainability import generate_explanation
 
-# Load
 
 model = joblib.load("models/xgb_model.pkl")
 preprocessor = joblib.load("models/preprocessor.pkl")
 
-explainer = ExplainabilityEngine(model)
+explainer = generate_explanation(model)
 
 # Input
 input_data = {
@@ -29,7 +28,10 @@ formatted = normalize_input(input_data)
 X = preprocessor.transform_input(formatted)
 
 # Explain
-result = explainer.explain(X, X.columns.tolist())
+explanations = []
+for feature, importance in explainer:
+    explanations.append({"feature": feature, "importance": importance})
 
 print("\n🧠 EXPLANATION:")
-print(result)
+for exp in explanations:
+    print(f"{exp['feature']}: {exp['importance']}")

@@ -1,5 +1,5 @@
-VerdictAlign
-Hybrid AI-Powered Employee Attrition Intelligence & Decision Validation Platform
+⚖️ VerdictAlign
+Hybrid AI Decision Engine for Employee Attrition Prediction with Explainable Consistency Checking
 
 Predict employee attrition with explainable machine learning, semantic similarity retrieval, and consistency-aware validation designed for reliable HR decision intelligence.
 

@@ -386,13 +386,13 @@ VerdictAlign/
 ├── requirements.txt             # Python dependencies
 └── README.md
 ```
-Screenshots / Demo:
+### Screenshots / Demo:
 ![User Interface](assets/frontend.png)
 ![User Interface](assets/frontend2.png)
 
-Prediction Result Interface:
+### Prediction Result Interface:
 ![Swagger UI](assets/swaggerUI.png)
-![Swagger UI](assets/swaggerUI2.png)
+![Swagger UI](assets/SwaggerUI2.png)
 
 ### Future Improvements
 - Dockerized microservice deployment
@@ -425,6 +425,6 @@ This project is licensed under the MIT License.
 
 Laeba Jamil
 
-GitHub: https://github.com/your-username
-LinkedIn: https://linkedin.com/in/your-profile
+GitHub: ```https://github.com/your-username```
+LinkedIn: ```https://linkedin.com/in/your-profile```
 <p align="center"> Built with reliability, explainability, and production-grade AI engineering principles. </p>

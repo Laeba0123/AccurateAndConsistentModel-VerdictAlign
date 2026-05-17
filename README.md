@@ -114,7 +114,7 @@ Full-stack deployment using Vercel (frontend) and Render (backend) with scalable
              │ + Explainability Report  │
              └──────────────────────────┘
              
-##  Technology Stack
+#  Technology Stack
 - Category	Technologies
 - Frontend	React 18, Vite, Tailwind CSS, Framer Motion, Axios, Recharts
 - Backend	FastAPI, Uvicorn, Gunicorn, Pydantic

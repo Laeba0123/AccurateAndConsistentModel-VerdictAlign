@@ -39,17 +39,18 @@ The system evaluates whether a generated prediction aligns with historically sim
 This architecture enables more trustworthy and interpretable AI-assisted workforce analytics suitable for enterprise HR environments, academic research, and intelligent decision support systems.
 
 # Live Demo & API Access
-## 🌐 Frontend Application
 
+## Frontend Application
 🚀 https://accurate-and-consistent-model-verdi-ruby.vercel.app
 
-## 📘 Backend Swagger Documentation
+## Backend Swagger Documentation
 
 📄 https://accurateandconsistentmodel-verdictalign-9.onrender.com/docs
 
-## 🔗 Backend API Base URL
+## Backend API Base URL
 https://accurateandconsistentmodel-verdictalign-9.onrender.com
-Key Features
+
+## Key Features
 ## 🤖 Machine Learning Prediction
 
 Uses an optimized XGBoost classifier trained on HR attrition data to predict employee resignation risk.
@@ -59,19 +60,15 @@ Uses an optimized XGBoost classifier trained on HR attrition data to predict emp
 Provides feature-level interpretability by identifying the major drivers influencing prediction outcomes.
 
 ## 🔍 Semantic Similarity Retrieval
-
 Retrieves historically similar employee profiles using Sentence-Transformers embeddings and vector similarity search.
 
 ## ⚖️ Consistency Validation Engine
-
 Compares model predictions against behavioral patterns from retrieved historical cases to detect inconsistencies.
 
 ## 📊 Interactive Analytics Dashboard
-
 Modern React-based frontend with responsive charts, motion effects, and API-driven visualization.
 
 # 🚀 Production Deployment
-
 Full-stack deployment using Vercel (frontend) and Render (backend) with scalable API architecture.
 
 ## System Architecture
@@ -118,35 +115,35 @@ Full-stack deployment using Vercel (frontend) and Render (backend) with scalable
              └──────────────────────────┘
              
 ##  Technology Stack
-Category	Technologies
-Frontend	React 18, Vite, Tailwind CSS, Framer Motion, Axios, Recharts
-Backend	FastAPI, Uvicorn, Gunicorn, Pydantic
-Machine Learning	XGBoost, Scikit-learn, Pandas, NumPy
-Explainability	SHAP
-NLP & Similarity	Sentence-Transformers
-Vector Database	Qdrant
-Deployment	Vercel, Render
-Version Control	Git, GitHub
-Machine Learning Pipeline
+- Category	Technologies
+- Frontend	React 18, Vite, Tailwind CSS, Framer Motion, Axios, Recharts
+- Backend	FastAPI, Uvicorn, Gunicorn, Pydantic
+- Machine Learning	XGBoost, Scikit-learn, Pandas, NumPy
+- Explainability	SHAP
+- NLP & Similarity	Sentence-Transformers
+- Vector Database	Qdrant
+- Deployment	Vercel, Render
+- Version Control	Git, GitHub
+- Machine Learning Pipeline
 
 ## 1. Data Preprocessing
 
 The HR dataset undergoes preprocessing and feature engineering before model training:
 
-Missing value handling
-Categorical encoding
-Feature normalization
-Structured HR feature selection
-Selected Features
-Feature	Description
-Age	Employee age
-Department	Organizational department
-JobRole	Employee role
-MonthlyIncome	Monthly salary
-YearsAtCompany	Organizational tenure
-JobSatisfaction	Satisfaction rating
-OverTime	Overtime status
-WorkLifeBalance	Work-life balance score
+- Missing value handling
+- Categorical encoding
+- Feature normalization
+- Structured HR feature selection
+- Selected Features
+- Feature	Description
+- Age	Employee age
+- Department	Organizational department
+- JobRole	Employee role
+- MonthlyIncome	Monthly salary
+- YearsAtCompany	Organizational tenure
+- JobSatisfaction	Satisfaction rating
+- OverTime	Overtime status
+- WorkLifeBalance	Work-life balance score
 
 ## 2. Feature Engineering
 
@@ -161,10 +158,10 @@ Textual representations are generated for embedding-based retrieval.
 
 The system uses XGBoost for binary attrition classification due to:
 
-Strong predictive performance
-Gradient boosting optimization
-Robust handling of structured tabular data
-Regularization support
+- Strong predictive performance
+- Gradient boosting optimization
+- Robust handling of structured tabular data
+- Regularization support
 
 ## 4. Semantic Similarity Search
 
@@ -178,11 +175,11 @@ SHAP explanations identify influential features contributing to each prediction 
 
 Example influential features include:
 
-Overtime
-Monthly income
-Job satisfaction
-Work-life balance
-Years at company
+- Overtime
+- Monthly income
+- Job satisfaction
+- Work-life balance
+- Years at company
 
 ## 6. Consistency Validation
 
@@ -200,37 +197,37 @@ VerdictAlign integrates SHAP (SHapley Additive Explanations) to improve interpre
 
 The system identifies:
 
-Which features influenced prediction decisions
-Relative contribution of each feature
-Positive and negative prediction drivers
-Similarity Retrieval Engine
+- Which features influenced prediction decisions
+- Relative contribution of each feature
+- Positive and negative prediction drivers
+- Similarity Retrieval Engine
 
 Semantic embeddings generated using Sentence-Transformers are indexed in Qdrant for high-speed similarity search.
 
 This enables:
 
-Context-aware retrieval
-Historical pattern comparison
-Behavioral expectation estimation
-Expectation Analysis
+- Context-aware retrieval
+- Historical pattern comparison
+- Behavioral expectation estimation
+- Expectation Analysis
 
 Retrieved employee cases are analyzed to estimate expected historical behavior patterns.
 
 The engine evaluates:
 
-Attrition frequency
-Majority behavioral trends
-Similar case distribution
-Inconsistency Detection
+- Attrition frequency
+- Majority behavioral trends
+- Similar case distribution
+- Inconsistency Detection
 
 If the machine learning prediction conflicts with historically similar cases, the system flags the result as potentially inconsistent.
 
 This creates an additional reliability layer beyond raw prediction probability.
 
-API Documentation
-Main Endpoint
-Method	Endpoint	Description
-POST	/api/v1/predict	Predict employee attrition and perform consistency validation
+- API Documentation
+- Main Endpoint
+- Method	Endpoint	Description
+- POST	/api/v1/predict	Predict employee attrition and perform consistency validation
 Example Request
 {
   "age": 34,
@@ -281,29 +278,29 @@ Frontend Overview
 
 The frontend is built using React 18 and Vite for high-performance rendering and modular UI development.
 
-Frontend Capabilities
-Responsive dashboard UI
-API-driven analytics visualization
-Interactive charts using Recharts
-Smooth animations with Framer Motion
-Real-time prediction interaction
-Modern Tailwind-based styling
-Deployment Architecture
-Frontend Deployment — Vercel
+- Frontend Capabilities
+- Responsive dashboard UI
+- API-driven analytics visualization
+- Interactive charts using Recharts
+- Smooth animations with Framer Motion
+- Real-time prediction interaction
+- Modern Tailwind-based styling
+- Deployment Architecture
+- Frontend Deployment — Vercel
 
 The frontend application is deployed using Vercel for:
 
-Edge delivery
-Fast static asset serving
-Automatic GitHub deployment integration
-Backend Deployment — Render
+- Edge delivery
+- Fast static asset serving
+- Automatic GitHub deployment integration
+- Backend Deployment — Render
 
 The FastAPI backend is deployed on Render using:
 
-Gunicorn
-Uvicorn workers
-Production API routing
-Deployment Workflow
+- Gunicorn
+- Uvicorn workers
+- Production API routing
+- Deployment Workflow
 GitHub Push
      │
      ├──────────────► Vercel Frontend Deployment
@@ -387,33 +384,33 @@ Swagger API Documentation
 
 Add Swagger /docs screenshot here
 
-Future Improvements
-Dockerized microservice deployment
-Authentication & RBAC
-Real-time HR analytics dashboards
-CI/CD automation pipelines
-Advanced model monitoring
-Multi-model ensemble validation
-Kubernetes deployment support
-Streaming inference architecture
-PDF report export functionality
-LLM-assisted HR recommendation engine
-Contributing
+- Future Improvements
+- Dockerized microservice deployment
+- Authentication & RBAC
+- Real-time HR analytics dashboards
+- CI/CD automation pipelines
+- Advanced model monitoring
+- Multi-model ensemble validation
+- Kubernetes deployment support
+- Streaming inference architecture
+- PDF report export functionality
+- LLM-assisted HR recommendation engine
+- Contributing
 
 Contributions are welcome.
 
 To contribute:
 
-Fork the repository
-Create a feature branch
-Commit changes
-Push updates
-Open a pull request
-License
+- Fork the repository
+- Create a feature branch
+- Commit changes
+- Push updates
+- Open a pull request
+## License
 
 This project is licensed under the MIT License.
 
-Author
+## Author
 
 Laeba Jamil
 

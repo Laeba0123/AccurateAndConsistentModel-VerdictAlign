@@ -431,6 +431,5 @@ This project is licensed under the MIT License.
 
 Laeba Jamil
 
-GitHub: ```https://github.com/your-username```
-LinkedIn: ```https://linkedin.com/in/your-profile```
+GitHub: ```[https://github.com/your-username](https://github.com/Laeba0123)```
 <p align="center"> Built with reliability, explainability, and production-grade AI engineering principles. </p>

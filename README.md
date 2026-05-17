@@ -5,34 +5,34 @@ Predict employee attrition with explainable machine learning, semantic similarit
 <p align="left"> <img src="https://img.shields.io/badge/FastAPI-005571?style=for-the-badge&logo=fastapi" /> <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react" /> <img src="https://img.shields.io/badge/XGBoost-FF6F00?style=for-the-badge" /> <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python" /> <img src="https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel" /> <img src="https://img.shields.io/badge/Render-46E3B7?style=for-the-badge&logo=render" /> <img src="https://img.shields.io/badge/Status-Production%20Ready-success?style=for-the-badge" /> <img src="https://img.shields.io/badge/License-MIT-blue?style=for-the-badge" /> </p>
 
 # Table of Contents
-Overview
-Live Demo & API Access
-Key Features
-System Architecture
-Technology Stack
-Machine Learning Pipeline
-Explainability & Validation Layer
-API Documentation
-Frontend Overview
-Deployment Architecture
-Local Development Setup
-Project Structure
-Screenshots / Demo
-Future Improvements
-Contributing
-License
-Author
-Overview
-
+- Overview
+- Live Demo & API Access
+- Key Features
+- System Architecture
+- Technology Stack
+- Machine Learning Pipeline
+- Explainability & Validation Layer
+- API Documentation
+- Frontend Overview
+- Deployment Architecture
+- Local Development Setup
+- Project Structure
+- Screenshots / Demo
+- Future Improvements
+- Contributing
+- License
+- Author
+  
+# Overview
 VerdictAlign is a hybrid AI-powered employee attrition prediction and validation platform designed to improve reliability and transparency in HR analytics systems.
 
 Traditional predictive models typically generate decisions based solely on statistical probability. VerdictAlign extends this paradigm by integrating:
 
-Predictive machine learning
-Semantic similarity retrieval
-Explainable AI
-Historical expectation analysis
-Decision consistency validation
+- Predictive machine learning
+- Semantic similarity retrieval
+- Explainable AI
+- Historical expectation analysis
+- Decision consistency validation
 
 The system evaluates whether a generated prediction aligns with historically similar employee behaviors before presenting the final result.
 
@@ -50,7 +50,7 @@ This architecture enables more trustworthy and interpretable AI-assisted workfor
 ## Backend API Base URL
 https://accurateandconsistentmodel-verdictalign-9.onrender.com
 
-## Key Features
+# Key Features
 ## 🤖 Machine Learning Prediction
 
 Uses an optimized XGBoost classifier trained on HR attrition data to predict employee resignation risk.
@@ -68,10 +68,10 @@ Compares model predictions against behavioral patterns from retrieved historical
 ## 📊 Interactive Analytics Dashboard
 Modern React-based frontend with responsive charts, motion effects, and API-driven visualization.
 
-# 🚀 Production Deployment
+## 🚀 Production Deployment
 Full-stack deployment using Vercel (frontend) and Render (backend) with scalable API architecture.
 
-## System Architecture
+# System Architecture
 
                            ┌───────────────────────┐
                            │        User           │
@@ -126,7 +126,7 @@ Full-stack deployment using Vercel (frontend) and Render (backend) with scalable
 - Version Control	Git, GitHub
 - Machine Learning Pipeline
 
-## 1. Data Preprocessing
+### 1. Data Preprocessing
 
 The HR dataset undergoes preprocessing and feature engineering before model training:
 
@@ -145,7 +145,7 @@ The HR dataset undergoes preprocessing and feature engineering before model trai
 - OverTime	Overtime status
 - WorkLifeBalance	Work-life balance score
 
-## 2. Feature Engineering
+### 2. Feature Engineering
 
 Structured employee records are transformed into machine-readable representations suitable for both:
 
@@ -154,7 +154,7 @@ Semantic similarity retrieval
 
 Textual representations are generated for embedding-based retrieval.
 
-## 3. Model Training
+### 3. Model Training
 
 The system uses XGBoost for binary attrition classification due to:
 
@@ -163,13 +163,13 @@ The system uses XGBoost for binary attrition classification due to:
 - Robust handling of structured tabular data
 - Regularization support
 
-## 4. Semantic Similarity Search
+### 4. Semantic Similarity Search
 
 Employee records are embedded using Sentence-BERT embeddings and stored inside Qdrant vector collections.
 
 Nearest-neighbor retrieval enables contextual comparison against historically similar employee cases.
 
-## 5. Explainability Layer
+### 5. Explainability Layer
 
 SHAP explanations identify influential features contributing to each prediction outcome.
 
@@ -181,7 +181,7 @@ Example influential features include:
 - Work-life balance
 - Years at company
 
-## 6. Consistency Validation
+### 6. Consistency Validation
 
 The consistency engine compares:
 
@@ -316,14 +316,16 @@ GitHub Push
 ```
 Render Blueprint
 services:
+```
     type: web
     name: verdictalign-api
     runtime: python
     buildCommand: pip install -r requirements.txt
     startCommand: gunicorn app.main:app -k uvicorn.workers.UvicornWorker
-Local Development Setup
-Clone Repository
 ```
+Local Development Setup
+```
+Clone Repository
 git clone https://github.com/your-username/verdictalign.git
 cd verdictalign
 Backend Setup
@@ -397,7 +399,7 @@ Swagger API Documentation
 
 Add Swagger /docs screenshot here
 
-- Future Improvements
+### Future Improvements
 - Dockerized microservice deployment
 - Authentication & RBAC
 - Real-time HR analytics dashboards
@@ -419,6 +421,7 @@ To contribute:
 - Commit changes
 - Push updates
 - Open a pull request
+  
 ## License
 
 This project is licensed under the MIT License.

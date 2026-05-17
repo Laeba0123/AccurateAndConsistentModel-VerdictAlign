@@ -229,6 +229,7 @@ This creates an additional reliability layer beyond raw prediction probability.
 - Method	Endpoint	Description
 - POST	/api/v1/predict	Predict employee attrition and perform consistency validation
 Example Request
+```
 {
   "age": 34,
   "department": "Sales",
@@ -239,7 +240,9 @@ Example Request
   "overtime": "Yes",
   "work_life_balance": 2
 }
+```
 Example Response
+```
 {
   "prediction": "Yes",
   "confidence": 0.87,
@@ -258,7 +261,9 @@ Example Response
     "WorkLifeBalance"
   ]
 }
+```
 cURL Example
+```
 curl -X POST \
 "https://accurateandconsistentmodel-verdictalign-9.onrender.com/api/v1/predict" \
 -H "Content-Type: application/json" \
@@ -272,10 +277,11 @@ curl -X POST \
   "overtime": "Yes",
   "work_life_balance": 2
 }'
+```
 Swagger Documentation
 https://accurateandconsistentmodel-verdictalign-9.onrender.com/docs
-Frontend Overview
 
+Frontend Overview
 The frontend is built using React 18 and Vite for high-performance rendering and modular UI development.
 
 - Frontend Capabilities
@@ -301,20 +307,23 @@ The FastAPI backend is deployed on Render using:
 - Uvicorn workers
 - Production API routing
 - Deployment Workflow
+```
 GitHub Push
      │
      ├──────────────► Vercel Frontend Deployment
      │
      └──────────────► Render Backend Deployment
+```
 Render Blueprint
 services:
-  - type: web
+    type: web
     name: verdictalign-api
     runtime: python
     buildCommand: pip install -r requirements.txt
     startCommand: gunicorn app.main:app -k uvicorn.workers.UvicornWorker
 Local Development Setup
 Clone Repository
+```
 git clone https://github.com/your-username/verdictalign.git
 cd verdictalign
 Backend Setup
@@ -329,20 +338,23 @@ Install Dependencies
 pip install -r requirements.txt
 Run Backend
 uvicorn app.main:app --reload
+```
 
 Backend runs at:
-
+```
 http://127.0.0.1:8000
 Frontend Setup
 cd frontend
 npm install
 npm run dev
+```
 
 Frontend runs at:
-
+```
 http://localhost:5173
+```
 Environment Variables
-
+```
 Create a .env file:
 
 API_BASE_URL=http://127.0.0.1:8000
@@ -371,6 +383,7 @@ VerdictAlign/
 ├── docker-compose.yml           # Container orchestration
 ├── requirements.txt             # Python dependencies
 └── README.md
+```
 Screenshots / Demo
 Dashboard Preview
 

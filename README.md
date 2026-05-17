@@ -75,6 +75,7 @@ Modern React-based frontend with responsive charts, motion effects, and API-driv
 Full-stack deployment using Vercel (frontend) and Render (backend) with scalable API architecture.
 
 ## System Architecture
+
                            ┌───────────────────────┐
                            │        User           │
                            └──────────┬────────────┘
@@ -93,18 +94,18 @@ Full-stack deployment using Vercel (frontend) and Render (backend) with scalable
                             │
         ┌───────────────────┼────────────────────┐
         ▼                   ▼                    ▼
-┌──────────────┐   ┌────────────────┐   ┌─────────────────┐
-│ XGBoost ML   │   │ SHAP Engine    │   │ Retrieval Layer │
-│ Prediction   │   │ Explainability │   │ Semantic Search │
-└──────┬───────┘   └──────┬─────────┘   └────────┬────────┘
-       │                  │                      │
-       ▼                  ▼                      ▼
- ┌────────────┐   ┌──────────────┐      ┌────────────────┐
- │ Prediction │   │ Feature      │      │ Qdrant Vector  │
- │ Probability│   │ Contributions│      │ Database       │
- └─────┬──────┘   └──────┬───────┘      └────────┬───────┘
-       └─────────────────┼───────────────────────┘
-                         ▼
+    ┌──────────────┐   ┌────────────────┐   ┌─────────────────┐
+    │ XGBoost ML   │   │ SHAP Engine    │   │ Retrieval Layer │
+    │ Prediction   │   │ Explainability │   │ Semantic Search │
+    └──────┬───────┘   └──────┬─────────┘   └────────┬────────┘
+           │                  │                      │
+           ▼                  ▼                      ▼
+    ┌────────────┐   ┌──────────────┐      ┌────────────────┐
+    │ Prediction │   │ Feature      │      │ Qdrant Vector  │
+    │ Probability│   │ Contributions│      │ Database       │
+    └─────┬──────┘   └──────┬───────┘      └────────┬───────┘
+          └─────────────────┼───────────────────────┘
+                            ▼
              ┌──────────────────────────┐
              │ Validation & Consistency │
              │ Expectation Analysis     │
@@ -115,7 +116,8 @@ Full-stack deployment using Vercel (frontend) and Render (backend) with scalable
              │ Final Decision Response  │
              │ + Explainability Report  │
              └──────────────────────────┘
-# Technology Stack
+             
+##  Technology Stack
 Category	Technologies
 Frontend	React 18, Vite, Tailwind CSS, Framer Motion, Axios, Recharts
 Backend	FastAPI, Uvicorn, Gunicorn, Pydantic
@@ -127,7 +129,7 @@ Deployment	Vercel, Render
 Version Control	Git, GitHub
 Machine Learning Pipeline
 
-1. Data Preprocessing
+## 1. Data Preprocessing
 
 The HR dataset undergoes preprocessing and feature engineering before model training:
 
@@ -145,7 +147,8 @@ YearsAtCompany	Organizational tenure
 JobSatisfaction	Satisfaction rating
 OverTime	Overtime status
 WorkLifeBalance	Work-life balance score
-2. Feature Engineering
+
+## 2. Feature Engineering
 
 Structured employee records are transformed into machine-readable representations suitable for both:
 
@@ -154,7 +157,7 @@ Semantic similarity retrieval
 
 Textual representations are generated for embedding-based retrieval.
 
-3. Model Training
+## 3. Model Training
 
 The system uses XGBoost for binary attrition classification due to:
 
@@ -162,13 +165,14 @@ Strong predictive performance
 Gradient boosting optimization
 Robust handling of structured tabular data
 Regularization support
-4. Semantic Similarity Search
+
+## 4. Semantic Similarity Search
 
 Employee records are embedded using Sentence-BERT embeddings and stored inside Qdrant vector collections.
 
 Nearest-neighbor retrieval enables contextual comparison against historically similar employee cases.
 
-5. Explainability Layer
+## 5. Explainability Layer
 
 SHAP explanations identify influential features contributing to each prediction outcome.
 
@@ -179,7 +183,8 @@ Monthly income
 Job satisfaction
 Work-life balance
 Years at company
-6. Consistency Validation
+
+## 6. Consistency Validation
 
 The consistency engine compares:
 

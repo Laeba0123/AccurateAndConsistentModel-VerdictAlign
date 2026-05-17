@@ -51,24 +51,24 @@ This architecture enables more trustworthy and interpretable AI-assisted workfor
 https://accurateandconsistentmodel-verdictalign-9.onrender.com
 
 # Key Features
-## 🤖 Machine Learning Prediction
+### 🤖 Machine Learning Prediction
 
 Uses an optimized XGBoost classifier trained on HR attrition data to predict employee resignation risk.
 
-## 🧠 Explainable AI (SHAP)
+### 🧠 Explainable AI (SHAP)
 
 Provides feature-level interpretability by identifying the major drivers influencing prediction outcomes.
 
-## 🔍 Semantic Similarity Retrieval
+### 🔍 Semantic Similarity Retrieval
 Retrieves historically similar employee profiles using Sentence-Transformers embeddings and vector similarity search.
 
-## ⚖️ Consistency Validation Engine
+### ⚖️ Consistency Validation Engine
 Compares model predictions against behavioral patterns from retrieved historical cases to detect inconsistencies.
 
-## 📊 Interactive Analytics Dashboard
+### 📊 Interactive Analytics Dashboard
 Modern React-based frontend with responsive charts, motion effects, and API-driven visualization.
 
-## 🚀 Production Deployment
+### 🚀 Production Deployment
 Full-stack deployment using Vercel (frontend) and Render (backend) with scalable API architecture.
 
 # System Architecture
@@ -262,7 +262,7 @@ Example Response
   ]
 }
 ```
-cURL Example
+Curl Example
 ```
 curl -X POST \
 "https://accurateandconsistentmodel-verdictalign-9.onrender.com/api/v1/predict" \
@@ -386,18 +386,13 @@ VerdictAlign/
 ├── requirements.txt             # Python dependencies
 └── README.md
 ```
-Screenshots / Demo
-Dashboard Preview
+Screenshots / Demo:
+![User Interface](assets/frontend.png)
+![User Interface](assets/frontend2.png)
 
-Add frontend dashboard screenshot here
-
-Prediction Result Interface
-
-Add prediction output screenshot here
-
-Swagger API Documentation
-
-Add Swagger /docs screenshot here
+Prediction Result Interface:
+![Swagger UI](assets/swaggerUI.png)
+![Swagger UI](assets/swaggerUI2.png)
 
 ### Future Improvements
 - Dockerized microservice deployment

@@ -1,10 +1,10 @@
-⚖️ VerdictAlign
+# ⚖️ VerdictAlign
 Hybrid AI Decision Engine for Employee Attrition Prediction with Explainable Consistency Checking
 Predict employee attrition with explainable machine learning, semantic similarity retrieval, and consistency-aware validation designed for reliable HR decision intelligence.
 
 <p align="left"> <img src="https://img.shields.io/badge/FastAPI-005571?style=for-the-badge&logo=fastapi" /> <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react" /> <img src="https://img.shields.io/badge/XGBoost-FF6F00?style=for-the-badge" /> <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python" /> <img src="https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel" /> <img src="https://img.shields.io/badge/Render-46E3B7?style=for-the-badge&logo=render" /> <img src="https://img.shields.io/badge/Status-Production%20Ready-success?style=for-the-badge" /> <img src="https://img.shields.io/badge/License-MIT-blue?style=for-the-badge" /> </p>
 
-Table of Contents
+# Table of Contents
 Overview
 Live Demo & API Access
 Key Features
@@ -38,43 +38,43 @@ The system evaluates whether a generated prediction aligns with historically sim
 
 This architecture enables more trustworthy and interpretable AI-assisted workforce analytics suitable for enterprise HR environments, academic research, and intelligent decision support systems.
 
-Live Demo & API Access
-🌐 Frontend Application
+# Live Demo & API Access
+## 🌐 Frontend Application
 
 🚀 https://accurate-and-consistent-model-verdi-ruby.vercel.app
 
-📘 Backend Swagger Documentation
+## 📘 Backend Swagger Documentation
 
 📄 https://accurateandconsistentmodel-verdictalign-9.onrender.com/docs
 
-🔗 Backend API Base URL
+## 🔗 Backend API Base URL
 https://accurateandconsistentmodel-verdictalign-9.onrender.com
 Key Features
-🤖 Machine Learning Prediction
+## 🤖 Machine Learning Prediction
 
 Uses an optimized XGBoost classifier trained on HR attrition data to predict employee resignation risk.
 
-🧠 Explainable AI (SHAP)
+## 🧠 Explainable AI (SHAP)
 
 Provides feature-level interpretability by identifying the major drivers influencing prediction outcomes.
 
-🔍 Semantic Similarity Retrieval
+## 🔍 Semantic Similarity Retrieval
 
 Retrieves historically similar employee profiles using Sentence-Transformers embeddings and vector similarity search.
 
-⚖️ Consistency Validation Engine
+## ⚖️ Consistency Validation Engine
 
 Compares model predictions against behavioral patterns from retrieved historical cases to detect inconsistencies.
 
-📊 Interactive Analytics Dashboard
+## 📊 Interactive Analytics Dashboard
 
 Modern React-based frontend with responsive charts, motion effects, and API-driven visualization.
 
-🚀 Production Deployment
+# 🚀 Production Deployment
 
 Full-stack deployment using Vercel (frontend) and Render (backend) with scalable API architecture.
 
-System Architecture
+## System Architecture
                            ┌───────────────────────┐
                            │        User           │
                            └──────────┬────────────┘
@@ -115,7 +115,7 @@ System Architecture
              │ Final Decision Response  │
              │ + Explainability Report  │
              └──────────────────────────┘
-Technology Stack
+# Technology Stack
 Category	Technologies
 Frontend	React 18, Vite, Tailwind CSS, Framer Motion, Axios, Recharts
 Backend	FastAPI, Uvicorn, Gunicorn, Pydantic

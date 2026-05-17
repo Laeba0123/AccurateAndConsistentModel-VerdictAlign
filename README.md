@@ -156,8 +156,8 @@ The HR dataset undergoes preprocessing and feature engineering before model trai
 
 Structured employee records are transformed into machine-readable representations suitable for both:
 
-Predictive modeling
-Semantic similarity retrieval
+- Predictive modeling
+- Semantic similarity retrieval
 
 Textual representations are generated for embedding-based retrieval.
 
@@ -192,15 +192,14 @@ Example influential features include:
 
 The consistency engine compares:
 
-Current model prediction
-Majority historical behavior from retrieved cases
+- Current model prediction
+- Majority historical behavior from retrieved cases
 
 This additional validation layer improves reliability and decision transparency.
 
-Explainability & Validation Layer
-SHAP-Based Explainability
-
-VerdictAlign integrates SHAP (SHapley Additive Explanations) to improve interpretability of model outputs.
+- Explainability & Validation Layer
+- SHAP-Based Explainability
+- VerdictAlign integrates SHAP (SHapley Additive Explanations) to improve interpretability of model outputs.
 
 The system identifies:
 

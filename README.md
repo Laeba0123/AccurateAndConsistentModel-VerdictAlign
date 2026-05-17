@@ -269,7 +269,7 @@ Example Response
   ]
 }
 ```
-Curl Example
+cURL Example
 ```
 curl -X POST \
 "https://accurateandconsistentmodel-verdictalign-9.onrender.com/api/v1/predict" \
